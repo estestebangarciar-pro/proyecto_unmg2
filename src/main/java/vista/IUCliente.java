@@ -43,6 +43,12 @@ public class IUCliente extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre");
 
+        identificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                identificacionActionPerformed(evt);
+            }
+        });
+
         jCorreo.setText("Correo");
 
         jedad.setText("Edad");
@@ -109,6 +115,10 @@ public class IUCliente extends javax.swing.JFrame {
     private void edadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_edadActionPerformed
+
+    private void identificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_identificacionActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextField correo;
