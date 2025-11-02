@@ -28,24 +28,24 @@ public class IUMarca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        idmarca = new javax.swing.JLabel();
         identificacion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        marca = new javax.swing.JLabel();
         consultar = new javax.swing.JButton();
-        jmarcas = new javax.swing.JComboBox<>();
+        marcas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Identificación  Marca");
+        idmarca.setText("Identificación  Marca");
 
-        jLabel2.setText("Marca");
+        marca.setText("Marca");
 
         consultar.setText("Consultar");
 
-        jmarcas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ford", "Honda", "Volkswagen", "Jeep" }));
-        jmarcas.addActionListener(new java.awt.event.ActionListener() {
+        marcas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ford", "Honda", "Volkswagen", "Jeep" }));
+        marcas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmarcasActionPerformed(evt);
+                marcasActionPerformed(evt);
             }
         });
 
@@ -58,11 +58,11 @@ public class IUMarca extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
+                            .addComponent(idmarca)
+                            .addComponent(marca))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jmarcas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(marcas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(144, 144, 144)
@@ -74,12 +74,12 @@ public class IUMarca extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(idmarca)
                     .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jmarcas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(marca)
+                    .addComponent(marcas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(consultar)
                 .addContainerGap(160, Short.MAX_VALUE))
@@ -88,9 +88,9 @@ public class IUMarca extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jmarcasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmarcasActionPerformed
+    private void marcasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jmarcasActionPerformed
+    }//GEN-LAST:event_marcasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,8 +120,8 @@ public class IUMarca extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton consultar;
     public javax.swing.JTextField identificacion;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    public javax.swing.JComboBox<String> jmarcas;
+    public javax.swing.JLabel idmarca;
+    public javax.swing.JLabel marca;
+    public javax.swing.JComboBox<String> marcas;
     // End of variables declaration//GEN-END:variables
 }
