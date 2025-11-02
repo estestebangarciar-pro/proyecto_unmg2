@@ -183,7 +183,7 @@ public class IUVendedores extends javax.swing.JFrame {
                         .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(5, 5, 5)
                 .addComponent(Borrar)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
             .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
