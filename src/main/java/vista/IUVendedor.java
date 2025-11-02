@@ -8,14 +8,14 @@ package vista;
  *
  * @author cristobal
  */
-public class IUVendedores extends javax.swing.JFrame {
+public class IUVendedor extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVendedores.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVendedor.class.getName());
 
     /**
      * Creates new form IUVendedores
      */
-    public IUVendedores() {
+    public IUVendedor() {
         initComponents();
     }
 
@@ -239,7 +239,7 @@ public class IUVendedores extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUVendedores().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new IUVendedor().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
