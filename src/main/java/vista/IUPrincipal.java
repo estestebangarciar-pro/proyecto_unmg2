@@ -108,6 +108,7 @@ public class IUPrincipal extends javax.swing.JFrame {
         jConsultas.setText("Consultas");
         jConsultas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jSalir.setForeground(new java.awt.Color(0, 255, 255));
         jSalir.setText("Salir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
