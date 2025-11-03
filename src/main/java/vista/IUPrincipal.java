@@ -37,7 +37,7 @@ public class IUPrincipal extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jautos = new javax.swing.JMenu();
-        jBautos = new javax.swing.JMenu();
+        jautomoviles = new javax.swing.JMenu();
         jMarca = new javax.swing.JMenu();
         jventas = new javax.swing.JMenu();
         jvendedores = new javax.swing.JMenu();
@@ -69,8 +69,8 @@ public class IUPrincipal extends javax.swing.JFrame {
 
         jautos.setText("Automoviles");
 
-        jBautos.setText("Automoviles");
-        jautos.add(jBautos);
+        jautomoviles.setText("Automoviles");
+        jautos.add(jautomoviles);
 
         jMarca.setText("Marca");
         jautos.add(jMarca);
@@ -126,38 +126,14 @@ public class IUPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUPrincipal().setVisible(true));
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenu Venvendedores;
-    public javax.swing.JMenu jBautos;
     public javax.swing.JMenu jCliente;
     public javax.swing.JMenu jConsulta;
     public javax.swing.JMenu jMSalir;
-    public javax.swing.JMenu jMarca;
+    private javax.swing.JMenu jMarca;
     public javax.swing.JMenu jMaventa;
     public javax.swing.JMenu jMbuscaventas;
     private javax.swing.JMenu jMenu1;
@@ -169,6 +145,7 @@ public class IUPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     public javax.swing.JMenu jSalir;
+    public javax.swing.JMenu jautomoviles;
     public javax.swing.JMenu jautos;
     public javax.swing.JMenu jcredicesionario;
     public javax.swing.JMenu jvendedores;
