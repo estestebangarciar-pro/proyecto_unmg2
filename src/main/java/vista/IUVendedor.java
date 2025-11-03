@@ -118,7 +118,8 @@ public class IUVendedor extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(jTable5);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Modulo de Vendedores");
 
         Identificacion.setText("Identificación");
         Identificacion.setToolTipText("");
