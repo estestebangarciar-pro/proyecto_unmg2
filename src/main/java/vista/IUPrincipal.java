@@ -36,12 +36,24 @@ public class IUPrincipal extends javax.swing.JFrame {
         JClientes = new javax.swing.JButton();
         jMarcas = new javax.swing.JButton();
         jSalir = new javax.swing.JButton();
-        jVendedores = new javax.swing.JButton();
-        jAutomoviles1 = new javax.swing.JButton();
-        JClientes1 = new javax.swing.JButton();
-        jMarcas1 = new javax.swing.JButton();
-        jBventas1 = new javax.swing.JButton();
-        jSalir1 = new javax.swing.JButton();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu8 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jAuto = new javax.swing.JMenu();
+        jautos = new javax.swing.JMenu();
+        jMarca = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jvendedor = new javax.swing.JMenu();
+        jCliente = new javax.swing.JMenu();
+        jconsulta = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jsalir1 = new javax.swing.JMenu();
+        jMenu12 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
 
@@ -123,90 +135,76 @@ public class IUPrincipal extends javax.swing.JFrame {
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenu8.setText("File");
+        jMenuBar2.add(jMenu8);
+
+        jMenu13.setText("Edit");
+        jMenuBar2.add(jMenu13);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SISTEMA DE GESTION DEL CONCESIONARIO");
 
-        jVendedores.setBackground(new java.awt.Color(204, 204, 204));
-        jVendedores.setText("Vendedor");
-        jVendedores.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jVendedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jVendedoresActionPerformed(evt);
-            }
-        });
+        jAuto.setText("Automoviles");
 
-        jAutomoviles1.setBackground(new java.awt.Color(204, 204, 204));
-        jAutomoviles1.setText("Automoviles");
-        jAutomoviles1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jAutomoviles1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAutomoviles1ActionPerformed(evt);
-            }
-        });
+        jautos.setText("Automoviles");
+        jAuto.add(jautos);
 
-        JClientes1.setBackground(new java.awt.Color(204, 204, 204));
-        JClientes1.setText("Clientes");
-        JClientes1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMarca.setText("Marca");
+        jAuto.add(jMarca);
 
-        jMarcas1.setBackground(new java.awt.Color(204, 204, 204));
-        jMarcas1.setText("Marcas");
-        jMarcas1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.add(jAuto);
 
-        jBventas1.setBackground(new java.awt.Color(204, 204, 204));
-        jBventas1.setText("Ventas ");
-        jBventas1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu5.setText("Ventas");
 
-        jSalir1.setText("Salir");
+        jvendedor.setText("Vendedores");
+        jMenu5.add(jvendedor);
+
+        jCliente.setText("Cliente");
+        jMenu5.add(jCliente);
+
+        jMenuBar1.add(jMenu5);
+
+        jconsulta.setText("Consulta");
+
+        jMenu10.setText("Mayor venta");
+        jconsulta.add(jMenu10);
+
+        jMenu3.setText("Buscar vendedores");
+        jconsulta.add(jMenu3);
+
+        jMenu2.setText("Ventas vendedores");
+        jconsulta.add(jMenu2);
+
+        jMenu4.setText("Credito concesionario");
+        jconsulta.add(jMenu4);
+
+        jMenuBar1.add(jconsulta);
+
+        jsalir1.setText("Salir");
+
+        jMenu12.setText("Salir");
+        jsalir1.add(jMenu12);
+
+        jMenuBar1.add(jsalir1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jAutomoviles1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jVendedores, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(JClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jBventas1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74)
-                        .addComponent(jMarcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(jSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 335, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jVendedores, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jAutomoviles1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBventas1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jMarcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addComponent(jSalir1)
-                .addGap(55, 55, 55))
+            .addGap(0, 203, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVendedoresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jVendedoresActionPerformed
 
     private void jAutomovilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAutomovilesActionPerformed
         // TODO add your handling code here:
@@ -215,10 +213,6 @@ public class IUPrincipal extends javax.swing.JFrame {
     private void jVendedores1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVendedores1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jVendedores1ActionPerformed
-
-    private void jAutomoviles1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAutomoviles1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jAutomoviles1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,18 +241,30 @@ public class IUPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton JClientes;
-    public javax.swing.JButton JClientes1;
+    public javax.swing.JMenu jAuto;
     public javax.swing.JButton jAutomoviles;
-    public javax.swing.JButton jAutomoviles1;
     public javax.swing.JButton jBventas;
-    public javax.swing.JButton jBventas1;
+    public javax.swing.JMenu jCliente;
     private javax.swing.JFrame jFrame1;
+    public javax.swing.JMenu jMarca;
     public javax.swing.JButton jMarcas;
-    public javax.swing.JButton jMarcas1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    public javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem2;
     public javax.swing.JButton jSalir;
-    public javax.swing.JButton jSalir1;
-    public javax.swing.JButton jVendedores;
     public javax.swing.JButton jVendedores1;
+    public javax.swing.JMenu jautos;
+    public javax.swing.JMenu jconsulta;
+    public javax.swing.JMenu jsalir1;
+    public javax.swing.JMenu jvendedor;
     // End of variables declaration//GEN-END:variables
 }
