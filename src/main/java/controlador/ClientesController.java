@@ -4,10 +4,28 @@
  */
 package controlador;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import vista.IUCliente;
+
+
 /**
  *
  * @author esgar
  */
-public class ClientesController {
+public class ClientesController implements ActionListener{
+    private IUCliente vista;
     
+    public ClientesController (IUCliente vista){
+    this.vista = vista;
+    
+    //this.vista.guardar.addActionListener(this);
+    this.vista.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+    //if (ae.getsource().equals.(this.vista.guardar)){
+    //    int id = this.vista.identificacion;
+    }
 }

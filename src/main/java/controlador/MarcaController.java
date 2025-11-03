@@ -6,25 +6,23 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import vista.IUAutomoviles;
+import vista.IUMarca;
 
 /**
  *
- * @author cristobal
+ * @author esgar
  */
-public class AutomovilesController implements ActionListener{
-    private IUAutomoviles vista;
+public class MarcaController implements ActionListener{
+    private IUMarca vista;
     
-    public AutomovilesController(IUAutomoviles vista){
+    public MarcaController (IUMarca vista){
         this.vista = vista;
         
         this.vista.setVisible(true);
+    }
     
-    }
-
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        
+    public void actionPerformed(ActionEvent ae){
     }
-
+    
 }
