@@ -89,6 +89,7 @@ public class IUAutomoviles extends javax.swing.JFrame {
 
         vendido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SI", "NO" }));
 
+        guardar.setBackground(new java.awt.Color(102, 255, 102));
         guardar.setText("Guardar");
         guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
