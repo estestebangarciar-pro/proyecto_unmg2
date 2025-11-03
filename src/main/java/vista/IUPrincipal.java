@@ -42,8 +42,8 @@ public class IUPrincipal extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jautos = new javax.swing.JMenu();
-        jAutomoviles = new javax.swing.JMenuItem();
+        j_datos = new javax.swing.JMenu();
+        jautomoviles = new javax.swing.JMenuItem();
         jmarca = new javax.swing.JMenuItem();
         jventas = new javax.swing.JMenu();
         jVENDEDORES = new javax.swing.JMenuItem();
@@ -84,15 +84,20 @@ public class IUPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jautos.setText("Automoviles");
+        j_datos.setText("Datos");
 
-        jAutomoviles.setText("Automoviles");
-        jautos.add(jAutomoviles);
+        jautomoviles.setText("Automoviles");
+        jautomoviles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jautomovilesActionPerformed(evt);
+            }
+        });
+        j_datos.add(jautomoviles);
 
         jmarca.setText("Marca");
-        jautos.add(jmarca);
+        j_datos.add(jmarca);
 
-        jMenuBar1.add(jautos);
+        jMenuBar1.add(j_datos);
 
         jventas.setText("Ventas");
 
@@ -152,34 +157,13 @@ public class IUPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jVENDEDORESActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jautomovilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jautomovilesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jautomovilesActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUPrincipal().setVisible(true));
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenu Cliente;
-    public javax.swing.JMenuItem jAutomoviles;
     public javax.swing.JMenuItem jMSALIR;
     public javax.swing.JMenuItem jMayorventa;
     private javax.swing.JMenu jMenu1;
@@ -199,7 +183,8 @@ public class IUPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     public javax.swing.JMenu jSalir;
     public javax.swing.JMenuItem jVENDEDORES;
-    public javax.swing.JMenu jautos;
+    public javax.swing.JMenu j_datos;
+    public javax.swing.JMenuItem jautomoviles;
     public javax.swing.JMenuItem jbuscarven;
     public javax.swing.JMenuItem jconcesionario;
     public javax.swing.JMenuItem jmarca;

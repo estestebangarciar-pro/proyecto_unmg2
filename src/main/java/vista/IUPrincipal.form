@@ -101,18 +101,21 @@
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jautos">
+        <Menu class="javax.swing.JMenu" name="j_datos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Automoviles"/>
+            <Property name="text" type="java.lang.String" value="Datos"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jAutomoviles">
+            <MenuItem class="javax.swing.JMenuItem" name="jautomoviles">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Automoviles"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jautomovilesActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
