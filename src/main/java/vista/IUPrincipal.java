@@ -48,8 +48,8 @@ public class IUPrincipal extends javax.swing.JFrame {
         jautomoviles = new javax.swing.JMenuItem();
         jmarca = new javax.swing.JMenuItem();
         jventas = new javax.swing.JMenu();
-        jVENDEDORES = new javax.swing.JMenuItem();
-        Jcliente = new javax.swing.JMenu();
+        jvendedores = new javax.swing.JMenuItem();
+        jcliente = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
         jMayorventa = new javax.swing.JMenuItem();
         jbuscarven = new javax.swing.JMenuItem();
@@ -102,16 +102,21 @@ public class IUPrincipal extends javax.swing.JFrame {
 
         jventas.setText("Ventas");
 
-        jVENDEDORES.setText("Vendedores");
-        jVENDEDORES.addActionListener(new java.awt.event.ActionListener() {
+        jvendedores.setText("Vendedores");
+        jvendedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jVENDEDORESActionPerformed(evt);
+                jvendedoresActionPerformed(evt);
             }
         });
-        jventas.add(jVENDEDORES);
+        jventas.add(jvendedores);
 
-        Jcliente.setText("Cliente");
-        jventas.add(Jcliente);
+        jcliente.setText("Cliente");
+        jcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jclienteActionPerformed(evt);
+            }
+        });
+        jventas.add(jcliente);
 
         jMenuBar1.add(jventas);
 
@@ -154,13 +159,16 @@ public class IUPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jVENDEDORESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVENDEDORESActionPerformed
+    private void jvendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jvendedoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jVENDEDORESActionPerformed
+    }//GEN-LAST:event_jvendedoresActionPerformed
+
+    private void jclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jclienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jclienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JMenu Jcliente;
     public javax.swing.JMenuItem jMSALIR;
     public javax.swing.JMenuItem jMayorventa;
     private javax.swing.JMenu jMenu1;
@@ -181,12 +189,13 @@ public class IUPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     public javax.swing.JMenu jSalir;
-    public javax.swing.JMenuItem jVENDEDORES;
     public javax.swing.JMenu j_datos;
     public javax.swing.JMenuItem jautomoviles;
     public javax.swing.JMenuItem jbuscarven;
+    public javax.swing.JMenuItem jcliente;
     public javax.swing.JMenuItem jconcesionario;
     public javax.swing.JMenuItem jmarca;
+    public javax.swing.JMenuItem jvendedores;
     public javax.swing.JMenu jventas;
     public javax.swing.JMenuItem ventasvende;
     // End of variables declaration//GEN-END:variables
