@@ -18,7 +18,7 @@ public class AutomovilesController implements ActionListener{
     public AutomovilesController(IUAutomoviles vista){
         this.vista = vista;
         
-        this.vista.setvisible(true);
+        this.vista.setVisible(true);
     
     }
     
