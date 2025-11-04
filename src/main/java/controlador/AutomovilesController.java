@@ -6,26 +6,29 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import vista.IUCliente;
-
+import vista.IUAutomoviles;
 
 /**
  *
- * @author esgar
+ * @author cristobal
  */
-public class ClientesController implements ActionListener{
-    private IUCliente vista;
+public class AutomovilesController implements ActionListener{
+    private IUAutomoviles vista;
     
-    public ClientesController (IUCliente vista){
-    this.vista = vista;
+    public AutomovilesController(IUAutomoviles vista){
+        this.vista = vista;
+        
+        this.vista.setVisible(true);
     
-    //this.vista.guardar.addActionListener(this);
-    this.vista.setVisible(true);
     }
+    
 
+    
+    
     @Override
     public void actionPerformed(ActionEvent ae) {
-    //if (ae.getsource().equals.(this.vista.guardar)){
-    //    int id = this.vista.identificacion;
+       
     }
+    
+    
 }

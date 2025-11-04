@@ -45,6 +45,7 @@ public class IUCliente extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Modulo de Clientes");
 
         identificacion1.setText("Identificación");
 

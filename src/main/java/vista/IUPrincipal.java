@@ -13,7 +13,7 @@ public class IUPrincipal extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUPrincipal.class.getName());
 
     /**
-     * Creates new form IUprincipal2
+     * Creates new form IUPrincipal
      */
     public IUPrincipal() {
         initComponents();
@@ -29,236 +29,174 @@ public class IUPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu1 = new javax.swing.JMenu();
-        jFrame1 = new javax.swing.JFrame();
-        jAutomoviles = new javax.swing.JButton();
-        jVendedores1 = new javax.swing.JButton();
-        jBventas = new javax.swing.JButton();
-        JClientes = new javax.swing.JButton();
-        jMarcas = new javax.swing.JButton();
-        jSalir = new javax.swing.JButton();
-        jVendedores = new javax.swing.JButton();
-        jAutomoviles1 = new javax.swing.JButton();
-        JClientes1 = new javax.swing.JButton();
-        jMarcas1 = new javax.swing.JButton();
-        jBventas1 = new javax.swing.JButton();
-        jSalir1 = new javax.swing.JButton();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu11 = new javax.swing.JMenu();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        j_datos = new javax.swing.JMenu();
+        jautomoviles = new javax.swing.JMenuItem();
+        jmarca = new javax.swing.JMenuItem();
+        jventas = new javax.swing.JMenu();
+        jvendedores = new javax.swing.JMenuItem();
+        jcliente = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMayorventa = new javax.swing.JMenuItem();
+        jbuscarven = new javax.swing.JMenuItem();
+        ventasvende = new javax.swing.JMenuItem();
+        jconcesionario = new javax.swing.JMenuItem();
+        jSalir = new javax.swing.JMenu();
+        jMSALIR = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
 
-        jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        jFrame1.setTitle("SISTEMA DE GESTION DEL CONCESIONARIO");
+        jMenu2.setText("jMenu2");
 
-        jAutomoviles.setBackground(new java.awt.Color(204, 204, 204));
-        jAutomoviles.setText("Automoviles");
-        jAutomoviles.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jAutomoviles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAutomovilesActionPerformed(evt);
-            }
-        });
+        jMenu3.setText("jMenu3");
 
-        jVendedores1.setBackground(new java.awt.Color(204, 204, 204));
-        jVendedores1.setText("Vendedor");
-        jVendedores1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jVendedores1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jVendedores1ActionPerformed(evt);
-            }
-        });
+        jMenu4.setText("jMenu4");
 
-        jBventas.setBackground(new java.awt.Color(204, 204, 204));
-        jBventas.setText("Ventas ");
-        jBventas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu5.setText("jMenu5");
 
-        JClientes.setBackground(new java.awt.Color(204, 204, 204));
-        JClientes.setText("Clientes");
-        JClientes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu6.setText("jMenu6");
 
-        jMarcas.setBackground(new java.awt.Color(204, 204, 204));
-        jMarcas.setText("Marcas");
-        jMarcas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu7.setText("jMenu7");
 
-        jSalir.setForeground(new java.awt.Color(0, 255, 255));
-        jSalir.setText("Salir");
+        jMenu8.setText("jMenu8");
 
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jAutomoviles, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(jVendedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(JClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
-            .addGroup(jFrame1Layout.createSequentialGroup()
-                .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jFrame1Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jMarcas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(jBventas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jFrame1Layout.createSequentialGroup()
-                        .addGap(202, 202, 202)
-                        .addComponent(jSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jAutomoviles, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jVendedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jMarcas, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jBventas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(44, 44, 44)
-                .addComponent(jSalir)
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenuItem3.setText("jMenuItem3");
+
+        jMenuItem4.setText("jMenuItem4");
+
+        jMenuItem5.setText("jMenuItem5");
+
+        jMenuItem6.setText("jMenuItem6");
+
+        jMenu11.setText("jMenu11");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("SISTEMA DE GESTION DEL CONCESIONARIO");
 
-        jVendedores.setBackground(new java.awt.Color(204, 204, 204));
-        jVendedores.setText("Vendedor");
-        jVendedores.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jVendedores.addActionListener(new java.awt.event.ActionListener() {
+        j_datos.setText("Datos");
+
+        jautomoviles.setText("Automoviles");
+        j_datos.add(jautomoviles);
+
+        jmarca.setText("Marca");
+        j_datos.add(jmarca);
+
+        jMenuBar1.add(j_datos);
+
+        jventas.setText("Ventas");
+
+        jvendedores.setText("Vendedores");
+        jvendedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jVendedoresActionPerformed(evt);
+                jvendedoresActionPerformed(evt);
             }
         });
+        jventas.add(jvendedores);
 
-        jAutomoviles1.setBackground(new java.awt.Color(204, 204, 204));
-        jAutomoviles1.setText("Automoviles");
-        jAutomoviles1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jAutomoviles1.addActionListener(new java.awt.event.ActionListener() {
+        jcliente.setText("Cliente");
+        jcliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAutomoviles1ActionPerformed(evt);
+                jclienteActionPerformed(evt);
             }
         });
+        jventas.add(jcliente);
 
-        JClientes1.setBackground(new java.awt.Color(204, 204, 204));
-        JClientes1.setText("Clientes");
-        JClientes1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.add(jventas);
 
-        jMarcas1.setBackground(new java.awt.Color(204, 204, 204));
-        jMarcas1.setText("Marcas");
-        jMarcas1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu9.setText("Consultas");
 
-        jBventas1.setBackground(new java.awt.Color(204, 204, 204));
-        jBventas1.setText("Ventas ");
-        jBventas1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMayorventa.setText("Mayor venta");
+        jMenu9.add(jMayorventa);
 
-        jSalir1.setText("Salir");
+        jbuscarven.setText("Buscar vendedores");
+        jMenu9.add(jbuscarven);
+
+        ventasvende.setText("Ventas vendedores");
+        jMenu9.add(ventasvende);
+
+        jconcesionario.setText("Credito concesionario");
+        jMenu9.add(jconcesionario);
+
+        jMenuBar1.add(jMenu9);
+
+        jSalir.setText("Salir");
+
+        jMSALIR.setText("Salir");
+        jSalir.add(jMSALIR);
+
+        jMenuBar1.add(jSalir);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jAutomoviles1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jVendedores, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(JClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jBventas1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74)
-                        .addComponent(jMarcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(jSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jVendedores, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jAutomoviles1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBventas1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jMarcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addComponent(jSalir1)
-                .addGap(55, 55, 55))
+            .addGap(0, 277, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVendedoresActionPerformed
+    private void jvendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jvendedoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jVendedoresActionPerformed
+    }//GEN-LAST:event_jvendedoresActionPerformed
 
-    private void jAutomovilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAutomovilesActionPerformed
+    private void jclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jclienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jAutomovilesActionPerformed
+    }//GEN-LAST:event_jclienteActionPerformed
 
-    private void jVendedores1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVendedores1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jVendedores1ActionPerformed
-
-    private void jAutomoviles1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAutomoviles1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jAutomoviles1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUPrincipal().setVisible(true));
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JClientes;
-    public javax.swing.JButton JClientes1;
-    public javax.swing.JButton jAutomoviles;
-    public javax.swing.JButton jAutomoviles1;
-    public javax.swing.JButton jBventas;
-    public javax.swing.JButton jBventas1;
-    private javax.swing.JFrame jFrame1;
-    public javax.swing.JButton jMarcas;
-    public javax.swing.JButton jMarcas1;
+    public javax.swing.JMenuItem jMSALIR;
+    public javax.swing.JMenuItem jMayorventa;
     private javax.swing.JMenu jMenu1;
-    public javax.swing.JButton jSalir;
-    public javax.swing.JButton jSalir1;
-    public javax.swing.JButton jVendedores;
-    public javax.swing.JButton jVendedores1;
+    private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    public javax.swing.JMenu jSalir;
+    public javax.swing.JMenu j_datos;
+    public javax.swing.JMenuItem jautomoviles;
+    public javax.swing.JMenuItem jbuscarven;
+    public javax.swing.JMenuItem jcliente;
+    public javax.swing.JMenuItem jconcesionario;
+    public javax.swing.JMenuItem jmarca;
+    public javax.swing.JMenuItem jvendedores;
+    public javax.swing.JMenu jventas;
+    public javax.swing.JMenuItem ventasvende;
     // End of variables declaration//GEN-END:variables
 }
