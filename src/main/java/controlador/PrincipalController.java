@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Action;
 import vista.IUAutomoviles;
 import vista.IUPrincipal;
+import vista.IUCliente;
 
 /**
  *
@@ -22,6 +23,8 @@ public class PrincipalController implements ActionListener{
         
         this.vista.jautomoviles.addActionListener(this);
         
+        this.vista.jcliente.addActionListener(this);
+        
         this.vista.setVisible(true);
     
     }
@@ -29,10 +32,11 @@ public class PrincipalController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(this.vista.jautomoviles)){
-            AutomovilesController AutomovilesController = new AutomovilesController(new IUAutomoviles());
-            
+            AutomovilesController automovilesController = new AutomovilesController(new IUAutomoviles());      
         }
-        
+        if(ae.getSource().equals(this.vista.jcliente)){
+            ClientesController clientesController = new ClientesController(new IUCliente());      
+        }
     }
     
 }
