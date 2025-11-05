@@ -8,14 +8,14 @@ package vista;
  *
  * @author ASUS
  */
-public class IUVentas_credito_consesionario extends javax.swing.JFrame {
+public class IUVentas_credito_concesionario extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVentas_credito_consesionario.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVentas_credito_concesionario.class.getName());
 
     /**
      * Creates new form IUVentas_credito_consesionario
      */
-    public IUVentas_credito_consesionario() {
+    public IUVentas_credito_concesionario() {
         initComponents();
     }
 
@@ -113,7 +113,7 @@ public class IUVentas_credito_consesionario extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUVentas_credito_consesionario().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new IUVentas_credito_concesionario().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

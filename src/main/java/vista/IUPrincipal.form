@@ -171,6 +171,17 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jventass">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ventas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jventassActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu9">
@@ -178,7 +189,7 @@
             <Property name="text" type="java.lang.String" value="Consultas"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMayorventa">
+            <MenuItem class="javax.swing.JMenuItem" name="jmayorventa">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Mayor venta"/>
               </Properties>
@@ -194,7 +205,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="ventasvende">
+            <MenuItem class="javax.swing.JMenuItem" name="jventasvende">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ventas vendedores"/>
               </Properties>
@@ -202,7 +213,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jconcesionario">
+            <MenuItem class="javax.swing.JMenuItem" name="jcredito_concesionario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Credito concesionario"/>
               </Properties>

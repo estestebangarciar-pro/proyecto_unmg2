@@ -50,11 +50,12 @@ public class IUPrincipal extends javax.swing.JFrame {
         jventas = new javax.swing.JMenu();
         jvendedores = new javax.swing.JMenuItem();
         jcliente = new javax.swing.JMenuItem();
+        jventass = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
-        jMayorventa = new javax.swing.JMenuItem();
+        jmayorventa = new javax.swing.JMenuItem();
         jbuscarven = new javax.swing.JMenuItem();
-        ventasvende = new javax.swing.JMenuItem();
-        jconcesionario = new javax.swing.JMenuItem();
+        jventasvende = new javax.swing.JMenuItem();
+        jcredito_concesionario = new javax.swing.JMenuItem();
         jSalir = new javax.swing.JMenu();
         jMSALIR = new javax.swing.JMenuItem();
 
@@ -118,21 +119,29 @@ public class IUPrincipal extends javax.swing.JFrame {
         });
         jventas.add(jcliente);
 
+        jventass.setText("Ventas");
+        jventass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jventassActionPerformed(evt);
+            }
+        });
+        jventas.add(jventass);
+
         jMenuBar1.add(jventas);
 
         jMenu9.setText("Consultas");
 
-        jMayorventa.setText("Mayor venta");
-        jMenu9.add(jMayorventa);
+        jmayorventa.setText("Mayor venta");
+        jMenu9.add(jmayorventa);
 
         jbuscarven.setText("Buscar vendedores");
         jMenu9.add(jbuscarven);
 
-        ventasvende.setText("Ventas vendedores");
-        jMenu9.add(ventasvende);
+        jventasvende.setText("Ventas vendedores");
+        jMenu9.add(jventasvende);
 
-        jconcesionario.setText("Credito concesionario");
-        jMenu9.add(jconcesionario);
+        jcredito_concesionario.setText("Credito concesionario");
+        jMenu9.add(jcredito_concesionario);
 
         jMenuBar1.add(jMenu9);
 
@@ -167,10 +176,13 @@ public class IUPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jclienteActionPerformed
 
+    private void jventassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jventassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jventassActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem jMSALIR;
-    public javax.swing.JMenuItem jMayorventa;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
@@ -193,10 +205,12 @@ public class IUPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem jautomoviles;
     public javax.swing.JMenuItem jbuscarven;
     public javax.swing.JMenuItem jcliente;
-    public javax.swing.JMenuItem jconcesionario;
+    public javax.swing.JMenuItem jcredito_concesionario;
     public javax.swing.JMenuItem jmarca;
+    public javax.swing.JMenuItem jmayorventa;
     public javax.swing.JMenuItem jvendedores;
     public javax.swing.JMenu jventas;
-    public javax.swing.JMenuItem ventasvende;
+    public javax.swing.JMenuItem jventass;
+    public javax.swing.JMenuItem jventasvende;
     // End of variables declaration//GEN-END:variables
 }
