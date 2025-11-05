@@ -115,7 +115,7 @@ public class IUVentas extends javax.swing.JFrame {
 
         jLabel8.setText("Fecha Venta");
 
-        fecha_venta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        fecha_venta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel9.setText("Impuesto");
 
@@ -319,6 +319,7 @@ public class IUVentas extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void id_ventaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_ventaActionPerformed
