@@ -89,6 +89,7 @@ public class IUVentas_credito_concesionario extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

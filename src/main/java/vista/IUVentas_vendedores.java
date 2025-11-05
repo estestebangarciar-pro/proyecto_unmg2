@@ -127,6 +127,7 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void id_o_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_o_nombreActionPerformed
