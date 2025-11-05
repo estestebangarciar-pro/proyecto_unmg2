@@ -28,14 +28,14 @@ public class IUVendedor_mayor_venta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        consultarmayorventa = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTMayorventa = new javax.swing.JTable();
+        javax.swing.JLabel id_vended = new javax.swing.JLabel();
+        Buscar = new javax.swing.JButton();
+        id_vendedor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vendedor con mayor venta");
-
-        consultarmayorventa.setText("Consultar mayor venta");
 
         jTMayorventa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTMayorventa.setModel(new javax.swing.table.DefaultTableModel(
@@ -56,27 +56,38 @@ public class IUVendedor_mayor_venta extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTMayorventa);
 
+        id_vended.setText("ID Vendedor");
+
+        Buscar.setText("Buscar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(consultarmayorventa)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
+                .addComponent(id_vended, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(id_vendedor, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(Buscar)
+                .addGap(73, 73, 73))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
-                .addComponent(consultarmayorventa)
-                .addGap(40, 40, 40)
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Buscar)
+                    .addComponent(id_vended)
+                    .addComponent(id_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,7 +119,8 @@ public class IUVendedor_mayor_venta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton consultarmayorventa;
+    private javax.swing.JButton Buscar;
+    public javax.swing.JTextField id_vendedor;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTMayorventa;
     // End of variables declaration//GEN-END:variables
