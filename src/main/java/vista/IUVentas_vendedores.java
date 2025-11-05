@@ -36,7 +36,7 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
         total_ventas_vendedor = new javax.swing.JLabel();
         Total = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventas por vendedor");
 
         ID_o_nombre.setText("ID o Nombre");

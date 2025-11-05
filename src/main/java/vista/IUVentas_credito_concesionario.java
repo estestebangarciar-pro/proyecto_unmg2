@@ -32,7 +32,7 @@ public class IUVentas_credito_concesionario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTCredito_consesionario = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventas con credito del concesionario");
 
         ventas_credito.setText("Mostrar ventas");

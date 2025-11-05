@@ -59,7 +59,8 @@ public class IUVendedores extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Vendedores");
 
         jidenti.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jidenti.setText("Identificacion");

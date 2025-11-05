@@ -56,7 +56,7 @@ public class IUPrincipal extends javax.swing.JFrame {
         jbuscarven = new javax.swing.JMenuItem();
         jventasvende = new javax.swing.JMenuItem();
         jcredito_concesionario = new javax.swing.JMenuItem();
-        jSalir = new javax.swing.JMenu();
+        jsalir = new javax.swing.JMenu();
         jMSALIR = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -89,9 +89,10 @@ public class IUPrincipal extends javax.swing.JFrame {
 
         jMenu11.setText("jMenu11");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Menu Principal");
 
-        j_datos.setText("Datos");
+        j_datos.setText("Automoviles");
 
         jautomoviles.setText("Automoviles");
         j_datos.add(jautomoviles);
@@ -145,12 +146,12 @@ public class IUPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu9);
 
-        jSalir.setText("Salir");
+        jsalir.setText("Salir");
 
         jMSALIR.setText("Salir");
-        jSalir.add(jMSALIR);
+        jsalir.add(jMSALIR);
 
-        jMenuBar1.add(jSalir);
+        jMenuBar1.add(jsalir);
 
         setJMenuBar(jMenuBar1);
 
@@ -200,7 +201,6 @@ public class IUPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    public javax.swing.JMenu jSalir;
     public javax.swing.JMenu j_datos;
     public javax.swing.JMenuItem jautomoviles;
     public javax.swing.JMenuItem jbuscarven;
@@ -208,6 +208,7 @@ public class IUPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem jcredito_concesionario;
     public javax.swing.JMenuItem jmarca;
     public javax.swing.JMenuItem jmayorventa;
+    public javax.swing.JMenu jsalir;
     public javax.swing.JMenuItem jvendedores;
     public javax.swing.JMenu jventas;
     public javax.swing.JMenuItem jventass;
