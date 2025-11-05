@@ -8,14 +8,14 @@ package vista;
  *
  * @author ASUS
  */
-public class IUVentas_credito_consesionario extends javax.swing.JFrame {
+public class IUVentas_credito_concesionario extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVentas_credito_consesionario.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IUVentas_credito_concesionario.class.getName());
 
     /**
      * Creates new form IUVentas_credito_consesionario
      */
-    public IUVentas_credito_consesionario() {
+    public IUVentas_credito_concesionario() {
         initComponents();
     }
 
@@ -32,7 +32,7 @@ public class IUVentas_credito_consesionario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTCredito_consesionario = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventas con credito del concesionario");
 
         ventas_credito.setText("Mostrar ventas");
@@ -74,18 +74,18 @@ public class IUVentas_credito_consesionario extends javax.swing.JFrame {
                         .addGap(194, 194, 194)
                         .addComponent(ventas_credito))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
                 .addComponent(ventas_credito)
-                .addGap(28, 28, 28)
+                .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,7 +113,7 @@ public class IUVentas_credito_consesionario extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IUVentas_credito_consesionario().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new IUVentas_credito_concesionario().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
