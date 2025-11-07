@@ -39,7 +39,7 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventas por vendedor");
 
-        ID_o_nombre.setText("ID o Nombre");
+        ID_o_nombre.setText("Identificacion");
 
         id_o_nombre.setToolTipText("");
         id_o_nombre.addActionListener(new java.awt.event.ActionListener() {

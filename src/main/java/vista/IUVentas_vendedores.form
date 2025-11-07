@@ -71,7 +71,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="ID_o_nombre">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ID o Nombre"/>
+        <Property name="text" type="java.lang.String" value="Identificacion"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
