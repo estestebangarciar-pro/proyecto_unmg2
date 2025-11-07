@@ -34,7 +34,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         id_automovil = new javax.swing.JTextField();
         consultar = new javax.swing.JButton();
         tipo_motor = new javax.swing.JComboBox<>();
@@ -42,7 +41,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
         color = new javax.swing.JTextField();
         marca = new javax.swing.JComboBox<>();
         modelo = new javax.swing.JTextField();
-        vendido = new javax.swing.JComboBox<>();
         guardar = new javax.swing.JButton();
         eliminar = new javax.swing.JButton();
         actualizar = new javax.swing.JButton();
@@ -74,16 +72,12 @@ public class IUAutomoviles extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Tipo Motor");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setText("Vendido");
-
         id_automovil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 id_automovilActionPerformed(evt);
             }
         });
 
-        consultar.setBackground(new java.awt.Color(204, 204, 255));
         consultar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         consultar.setForeground(new java.awt.Color(0, 0, 102));
         consultar.setText("Consultar");
@@ -97,14 +91,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
 
         marca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FORD", "RENAULT", "BMW", "AUDI" }));
 
-        vendido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO", "SI" }));
-        vendido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vendidoActionPerformed(evt);
-            }
-        });
-
-        guardar.setBackground(new java.awt.Color(204, 255, 204));
         guardar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         guardar.setForeground(new java.awt.Color(0, 0, 102));
         guardar.setText("Guardar");
@@ -115,12 +101,10 @@ public class IUAutomoviles extends javax.swing.JFrame {
             }
         });
 
-        eliminar.setBackground(new java.awt.Color(255, 204, 204));
         eliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eliminar.setForeground(new java.awt.Color(0, 0, 102));
         eliminar.setText("Eliminar");
 
-        actualizar.setBackground(new java.awt.Color(204, 255, 255));
         actualizar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         actualizar.setForeground(new java.awt.Color(0, 0, 102));
         actualizar.setText("Actualizar");
@@ -130,7 +114,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
             }
         });
 
-        consultar_todos.setBackground(new java.awt.Color(204, 204, 255));
         consultar_todos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         consultar_todos.setForeground(new java.awt.Color(0, 0, 102));
         consultar_todos.setText("Consultar Todos");
@@ -182,14 +165,13 @@ public class IUAutomoviles extends javax.swing.JFrame {
                             .addComponent(consultar_todos)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(50, Short.MAX_VALUE)
+                        .addContainerGap(52, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(consultar)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -198,7 +180,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
                                 .addComponent(actualizar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(vendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(precio_base, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,17 +219,12 @@ public class IUAutomoviles extends javax.swing.JFrame {
                     .addComponent(marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(tipo_motor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(vendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addComponent(consultar)
-                .addGap(20, 20, 20)
+                .addGap(108, 108, 108)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(guardar)
                     .addComponent(actualizar)
-                    .addComponent(eliminar))
+                    .addComponent(eliminar)
+                    .addComponent(consultar))
                 .addGap(20, 20, 20)
                 .addComponent(consultar_todos)
                 .addGap(15, 15, 15)
@@ -280,10 +256,6 @@ public class IUAutomoviles extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_consultar_todosActionPerformed
 
-    private void vendidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_vendidoActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton actualizar;
     public javax.swing.JTextField color;
@@ -298,14 +270,12 @@ public class IUAutomoviles extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLabel5;
     public javax.swing.JLabel jLabel6;
-    public javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     public javax.swing.JComboBox<String> marca;
     public javax.swing.JTextField modelo;
     public javax.swing.JTextField precio_base;
     public javax.swing.JComboBox<String> tipo_motor;
-    private javax.swing.JComboBox<String> vendido;
     // End of variables declaration//GEN-END:variables
 
     public void setvisible(boolean b) {
