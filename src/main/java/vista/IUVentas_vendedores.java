@@ -28,23 +28,23 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ID_o_nombre = new javax.swing.JLabel();
-        id_o_nombre = new javax.swing.JTextField();
+        ID_vendedor = new javax.swing.JLabel();
+        id_vendedor = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTVentas_vendedores = new javax.swing.JTable();
         total_ventas_vendedor = new javax.swing.JLabel();
-        Total = new javax.swing.JTextField();
+        Total_ventas_vendedor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventas por vendedor");
 
-        ID_o_nombre.setText("ID o Nombre");
+        ID_vendedor.setText("ID vendedor");
 
-        id_o_nombre.setToolTipText("");
-        id_o_nombre.addActionListener(new java.awt.event.ActionListener() {
+        id_vendedor.setToolTipText("");
+        id_vendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                id_o_nombreActionPerformed(evt);
+                id_vendedorActionPerformed(evt);
             }
         });
 
@@ -84,8 +84,8 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
 
         total_ventas_vendedor.setText("Total ventas del vendedor");
 
-        Total.setEditable(false);
-        Total.setToolTipText("Total acumulado de ventas");
+        Total_ventas_vendedor.setEditable(false);
+        Total_ventas_vendedor.setToolTipText("Total acumulado de ventas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,45 +93,46 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(ID_o_nombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(id_o_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(Buscar)
-                .addGap(31, 31, 31))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(total_ventas_vendedor)
                         .addGap(44, 44, 44)
-                        .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(23, 23, 23))
+                        .addComponent(Total_ventas_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ID_vendedor)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(id_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Buscar)))
+                        .addContainerGap(18, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ID_o_nombre)
-                    .addComponent(id_o_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ID_vendedor)
+                    .addComponent(id_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Buscar))
-                .addGap(32, 32, 32)
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(total_ventas_vendedor)
-                    .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(Total_ventas_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void id_o_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_o_nombreActionPerformed
+    private void id_vendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_vendedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_id_o_nombreActionPerformed
+    }//GEN-LAST:event_id_vendedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,9 +161,9 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Buscar;
-    public javax.swing.JLabel ID_o_nombre;
-    public javax.swing.JTextField Total;
-    public javax.swing.JTextField id_o_nombre;
+    public javax.swing.JLabel ID_vendedor;
+    public javax.swing.JTextField Total_ventas_vendedor;
+    public javax.swing.JTextField id_vendedor;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTVentas_vendedores;
     public javax.swing.JLabel total_ventas_vendedor;
