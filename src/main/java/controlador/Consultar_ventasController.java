@@ -6,27 +6,22 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import vista.IUVentas;
-import vista.IUEmergenteVenta;
-
+import vista.IUconsulta_ventas;
 
 /**
  *
- * @author esgar
+ * @author cristobal
  */
-public class VentasController implements ActionListener{
-    private IUVentas vista;
+public class Consultar_ventasController implements ActionListener{
+    private IUconsulta_ventas vista;
     
-    public VentasController(IUVentas vista){
+    public Consultar_ventasController(IUconsulta_ventas vista){
         this.vista = vista;
-        this.vista.jconsultar.addActionListener(this);       
+                
         this.vista.setVisible(true);
     }
     
     @Override
     public void actionPerformed(ActionEvent ae){
-        if (ae.getSource().equals(this.vista.jconsultar)) {
-            new EmergenteVentaController(new IUEmergenteVenta());
-        }
     }
 }

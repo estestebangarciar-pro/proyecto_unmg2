@@ -15,6 +15,7 @@ import vista.IUVendedores;
 import vista.IUVendedor_mayor_venta;
 import vista.IUVentas_credito_concesionario;
 import vista.IUVentas_vendedores;
+import vista.IUconsulta_ventas;
 
 /**
  *
@@ -41,6 +42,8 @@ public class PrincipalController implements ActionListener {
         this.vista.jcredito_concesionario.addActionListener(this);
         
         this.vista.jventasvende.addActionListener(this);
+        
+        this.vista.jconsultar_ventas.addActionListener(this);
         
         
         this.vista.jMSALIR.addActionListener(this);
@@ -75,7 +78,10 @@ public class PrincipalController implements ActionListener {
         if (ae.getSource().equals(this.vista.jventasvende)) {
             new Vendedores_ventasController(new IUVentas_vendedores());
         }
-        
+        if (ae.getSource().equals(this.vista.jconsultar_ventas)) {
+            new Consultar_ventasController(new IUconsulta_ventas());
+        }
+
         if (ae.getSource().equals(this.vista.jMSALIR)) {
             System.exit(0);
         }

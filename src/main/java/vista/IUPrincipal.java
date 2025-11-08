@@ -55,6 +55,7 @@ public class IUPrincipal extends javax.swing.JFrame {
         jmayorventa = new javax.swing.JMenuItem();
         jventasvende = new javax.swing.JMenuItem();
         jcredito_concesionario = new javax.swing.JMenuItem();
+        jconsultar_ventas = new javax.swing.JMenuItem();
         jsalir = new javax.swing.JMenu();
         jMSALIR = new javax.swing.JMenuItem();
 
@@ -138,7 +139,20 @@ public class IUPrincipal extends javax.swing.JFrame {
         jMenu9.add(jventasvende);
 
         jcredito_concesionario.setText("Credito concesionario");
+        jcredito_concesionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcredito_concesionarioActionPerformed(evt);
+            }
+        });
         jMenu9.add(jcredito_concesionario);
+
+        jconsultar_ventas.setText("Consultar Ventas");
+        jconsultar_ventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jconsultar_ventasActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jconsultar_ventas);
 
         jMenuBar1.add(jMenu9);
 
@@ -178,6 +192,14 @@ public class IUPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jventassActionPerformed
 
+    private void jcredito_concesionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcredito_concesionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcredito_concesionarioActionPerformed
+
+    private void jconsultar_ventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconsultar_ventasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jconsultar_ventasActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem jMSALIR;
@@ -201,6 +223,7 @@ public class IUPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenu j_datos;
     public javax.swing.JMenuItem jautomoviles;
     public javax.swing.JMenuItem jcliente;
+    public javax.swing.JMenuItem jconsultar_ventas;
     public javax.swing.JMenuItem jcredito_concesionario;
     public javax.swing.JMenuItem jmarca;
     public javax.swing.JMenuItem jmayorventa;
