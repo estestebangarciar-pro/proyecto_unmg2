@@ -74,7 +74,6 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="ID_vendedor">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ID vendedor"/>
         <Property name="text" type="java.lang.String" value="Identificacion"/>
       </Properties>
       <AuxValues>
