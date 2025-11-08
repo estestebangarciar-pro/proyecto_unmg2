@@ -40,6 +40,7 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
         setTitle("Ventas por vendedor");
 
         ID_vendedor.setText("ID vendedor");
+        ID_o_nombre.setText("Identificacion");
 
         id_vendedor.setToolTipText("");
         id_vendedor.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +129,7 @@ public class IUVentas_vendedores extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void id_vendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_vendedorActionPerformed

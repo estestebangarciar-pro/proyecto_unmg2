@@ -53,7 +53,6 @@ public class IUPrincipal extends javax.swing.JFrame {
         jventass = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
         jmayorventa = new javax.swing.JMenuItem();
-        jbuscarven = new javax.swing.JMenuItem();
         jventasvende = new javax.swing.JMenuItem();
         jcredito_concesionario = new javax.swing.JMenuItem();
         jsalir = new javax.swing.JMenu();
@@ -135,9 +134,6 @@ public class IUPrincipal extends javax.swing.JFrame {
         jmayorventa.setText("Mayor venta");
         jMenu9.add(jmayorventa);
 
-        jbuscarven.setText("Buscar vendedores");
-        jMenu9.add(jbuscarven);
-
         jventasvende.setText("Ventas vendedores");
         jMenu9.add(jventasvende);
 
@@ -167,6 +163,7 @@ public class IUPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jvendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jvendedoresActionPerformed
@@ -203,7 +200,6 @@ public class IUPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     public javax.swing.JMenu j_datos;
     public javax.swing.JMenuItem jautomoviles;
-    public javax.swing.JMenuItem jbuscarven;
     public javax.swing.JMenuItem jcliente;
     public javax.swing.JMenuItem jcredito_concesionario;
     public javax.swing.JMenuItem jmarca;
