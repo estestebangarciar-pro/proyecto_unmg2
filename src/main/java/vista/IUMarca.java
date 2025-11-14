@@ -30,7 +30,7 @@ public class IUMarca extends javax.swing.JFrame {
 
         jMenu1 = new javax.swing.JMenu();
         idmarca = new javax.swing.JLabel();
-        identificacion = new javax.swing.JTextField();
+        jidentificacion = new javax.swing.JTextField();
         marca = new javax.swing.JLabel();
         consultar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -103,7 +103,7 @@ public class IUMarca extends javax.swing.JFrame {
                     .addComponent(marca))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(identificacion, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                    .addComponent(jidentificacion, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                     .addComponent(jmarca))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -123,7 +123,7 @@ public class IUMarca extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(idmarca)
-                    .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jidentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(marca)
@@ -160,11 +160,11 @@ public class IUMarca extends javax.swing.JFrame {
     public javax.swing.JButton consultar_todos;
     public javax.swing.JButton eliminar;
     public javax.swing.JButton guardar;
-    public javax.swing.JTextField identificacion;
     public javax.swing.JLabel idmarca;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    public javax.swing.JTextField jidentificacion;
     public javax.swing.JTextField jmarca;
     public javax.swing.JLabel marca;
     // End of variables declaration//GEN-END:variables
