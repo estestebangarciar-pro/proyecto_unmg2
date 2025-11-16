@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author cristobal
  */
-public class Marca implements Serializable{
+public class Marcadto implements Serializable{
     private int jidentificacion;
     private String jmarca;
 

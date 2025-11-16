@@ -1,6 +1,6 @@
 package modelo.dao;
 
-import Modelo.dto.Marca;
+import Modelo.dto.Marcadto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ public class Marcadao {
     private Connection conectar;
     
    
-    public boolean create(Marca marca) throws SQLException {
+    public boolean create(Marcadto marca) throws SQLException {
         boolean rowCreate = false;
         try {
             String sql = "INSERT INTO Marca (jidentificacion, jmarca) VALUES (?, ?)";
@@ -36,8 +36,8 @@ public class Marcadao {
     
     
     
-    public Marca read(int identificacion) throws SQLException {
-        Marca marca = null;
+    public Marcadto read(int identificacion) throws SQLException {
+        Marcadto marca = null;
         
         try {
             String sql = "SELECT * FROM Marca WHERE jidentificacion = ?";
@@ -49,7 +49,7 @@ public class Marcadao {
             ResultSet result = statement.executeQuery();
             
             if (result.next()) {
-                marca = new Marca();
+                marca = new Marcadto();
                 marca.setJidentificacion(result.getInt("jidentificacion"));
                 marca.setJmarca(result.getString("jmarca"));
             }
@@ -67,7 +67,7 @@ public class Marcadao {
     
     
    
-    public boolean update(Marca marca) throws SQLException {
+    public boolean update(Marcadto marca) throws SQLException {
         boolean rowUpdate = false;
         
         try {
@@ -116,8 +116,8 @@ public class Marcadao {
     
     
     
-    public List<Marca> listaMarcas() throws SQLException {
-        List<Marca> lista = new ArrayList<>();
+    public List<Marcadto> listaMarcas() throws SQLException {
+        List<Marcadto> lista = new ArrayList<>();
         
         try {
             String sql = "SELECT * FROM Marca";
@@ -127,7 +127,7 @@ public class Marcadao {
             ResultSet result = statement.executeQuery(sql);
             
             while (result.next()) {
-                Marca marca = new Marca();
+                Marcadto marca = new Marcadto();
                 marca.setJidentificacion(result.getInt("jidentificacion"));
                 marca.setJmarca(result.getString("jmarca"));
                 
