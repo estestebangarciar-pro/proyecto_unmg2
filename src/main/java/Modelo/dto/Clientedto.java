@@ -10,11 +10,19 @@ import java.io.Serializable;
  *
  * @author esgar
  */
-public class Clientes implements Serializable{
+public class Clientedto implements Serializable{
     private int identificacion1;
     private String nombre1;
     private String correo1;
     private int edad1;
+    
+public Clientedto(int identificacion1, String nombre1, String correo1, int edad1){
+    this.identificacion1 = identificacion1;
+    this.nombre1 = nombre1;
+    this.correo1 = correo1;
+    this.edad1 = edad1;
+} 
+    
 
     public int getIdentificacion1() {
         return identificacion1;
