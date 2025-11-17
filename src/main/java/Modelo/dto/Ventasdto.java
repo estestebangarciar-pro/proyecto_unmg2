@@ -6,7 +6,7 @@ package Modelo.dto;
 
 /**
  *
- * @author ASUS
+ * @author danvall
  */
 public class Ventasdto {
   

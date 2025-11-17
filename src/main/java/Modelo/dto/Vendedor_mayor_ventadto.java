@@ -19,6 +19,13 @@ public class Vendedor_mayor_ventadto implements Serializable {
     private String nombre;
     private String profesion;
     private double totalventa;
+
+    public Vendedor_mayor_ventadto(int idvendedor, String nombre, String profesion, double totalventa) {
+        this.idvendedor = idvendedor;
+        this.nombre = nombre;
+        this.profesion = profesion;
+        this.totalventa = totalventa;
+    }
    
    
     public int getIdvendedor() {
