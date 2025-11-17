@@ -13,6 +13,12 @@ import java.io.Serializable;
 public class Marcadto implements Serializable{
     private int jidentificacion;
     private String jmarca;
+    
+public Marcadto(int jidentificacion, String jmarca ){
+    this.jidentificacion = jidentificacion;
+    this.jmarca = jmarca;
+    
+} 
 
     public int getJidentificacion() {
         return jidentificacion;

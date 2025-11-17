@@ -33,16 +33,16 @@ public class IUVendedores extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jidenti = new javax.swing.JLabel();
         identificacion = new javax.swing.JTextField();
-        aasnombre = new javax.swing.JLabel();
+        jjnombre = new javax.swing.JLabel();
         identificacion1 = new javax.swing.JTextField();
-        Profesio = new javax.swing.JLabel();
+        jProfesio = new javax.swing.JLabel();
         jGuardarm = new javax.swing.JButton();
         Jbconsultar = new javax.swing.JButton();
         jborrar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         consultar_todos = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jprofesion = new javax.swing.JComboBox<>();
 
         jTextField1.setText("jTextField1");
 
@@ -72,9 +72,9 @@ public class IUVendedores extends javax.swing.JFrame {
             }
         });
 
-        aasnombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        aasnombre.setText("Nombre");
-        aasnombre.setToolTipText("");
+        jjnombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jjnombre.setText("Nombre");
+        jjnombre.setToolTipText("");
 
         identificacion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,9 +82,9 @@ public class IUVendedores extends javax.swing.JFrame {
             }
         });
 
-        Profesio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Profesio.setText("Profesion");
-        Profesio.setToolTipText("");
+        jProfesio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jProfesio.setText("Profesion");
+        jProfesio.setToolTipText("");
 
         jGuardarm.setText("Guardar");
 
@@ -129,7 +129,7 @@ public class IUVendedores extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingenieria informatica", "Ingeniería del Medio Ambiente", "Arquitectura", "Diseño Gráfico", "Comunicación Social", "Economía", "Derecho", "Psicoloía", "Administración de Empresas ", "Otras" }));
+        jprofesion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingenieria informatica", "Ingeniería del Medio Ambiente", "Arquitectura", "Diseño Gráfico", "Comunicación Social", "Economía", "Derecho", "Psicoloía", "Administración de Empresas ", "Otras" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,11 +139,11 @@ public class IUVendedores extends javax.swing.JFrame {
                 .addGap(30, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Profesio, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jProfesio, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jprofesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(aasnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jjnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(identificacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -177,11 +177,11 @@ public class IUVendedores extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(identificacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aasnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jjnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Profesio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jProfesio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jprofesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jGuardarm)
@@ -212,13 +212,11 @@ public class IUVendedores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Jbconsultar;
-    public javax.swing.JLabel Profesio;
-    public javax.swing.JLabel aasnombre;
     public javax.swing.JButton consultar_todos;
     public javax.swing.JTextField identificacion;
     public javax.swing.JTextField identificacion1;
-    private javax.swing.JComboBox<String> jComboBox1;
     public javax.swing.JButton jGuardarm;
+    public javax.swing.JLabel jProfesio;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
@@ -226,5 +224,7 @@ public class IUVendedores extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     public javax.swing.JButton jborrar;
     public javax.swing.JLabel jidenti;
+    public javax.swing.JLabel jjnombre;
+    public javax.swing.JComboBox<String> jprofesion;
     // End of variables declaration//GEN-END:variables
 }

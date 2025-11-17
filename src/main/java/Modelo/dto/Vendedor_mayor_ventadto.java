@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -18,8 +19,8 @@ public class Vendedor_mayor_ventadto implements Serializable {
     private String nombre;
     private String profesion;
     private double totalventa;
-    
-
+   
+   
     public int getIdvendedor() {
         return idvendedor;
     }
@@ -51,5 +52,5 @@ public class Vendedor_mayor_ventadto implements Serializable {
     public void setTotalventa(double totalventa) {
         this.totalventa = totalventa;
     }
-   
+    
 }
