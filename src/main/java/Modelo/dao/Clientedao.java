@@ -1,6 +1,6 @@
 package modelo.dao;
 
-import modelo.dto.Clientes; 
+import modelo.dto.Clientedto; 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,24 +11,24 @@ import java.util.List;
 
 public class Clientedao {
     private Connection conectar;
+   // private Clientedto cliente;
                 
-    public boolean create(Clientes clientes) throws SQLException {
+    public boolean create(Clientedto cliente) throws SQLException {
         boolean rowCreate=false;
         try {
-            
-            String sql = "INSERT INTO Clientes (identificacion1,nombre1,correo1,edad1) VALUES(?,?,?,?)";
+            String sql = "INSERT INTO Clientes (identificacion,nombre,correo,edad) VALUES(?,?,?,?)";
             conectar = Conexion.conectar();
             
-            PreparedStatement statement = conectar.prepareStatement(sql);
+            PreparedStatement statement = (PreparedStatement) conectar.prepareStatement(sql);
             
-            statement.setInt(1, clientes.getIdentificacion1());
-            statement.setString(2, clientes.getNombre1());
-            statement.setString(3, clientes.getCorreo1());
-            statement.setInt(4, clientes.getEdad1());
+            statement.setInt(1, cliente.getIdentificacion1());
+            statement.setString(2, cliente.getNombre1());
+            statement.setString(3, cliente.getCorreo1());
+            statement.setInt(4, cliente.getEdad1());
             
             rowCreate = statement.executeUpdate() > 0;
             statement.close();
-            Conexion.desconectar();
+            Conexion.cerrarconexion();
             
         } catch (Exception e) {
             System.out.println("error create");
@@ -36,52 +36,48 @@ public class Clientedao {
         return rowCreate;
     }
 
-    public Clientes read(int identificacion) throws SQLException {
-        Clientes cliente = null;
+    public Clientedto read(int identificacion) throws SQLException {
+        Clientedto cliente = null;
         try {
             
             String sql = "SELECT * FROM Clientes WHERE identificacion1 = ?";
             conectar = Conexion.conectar();	
             
-            PreparedStatement statement = conectar.prepareStatement(sql);
+            PreparedStatement statement = (PreparedStatement) conectar.prepareStatement(sql);
             statement.setInt(1, identificacion);
             
             ResultSet resultSet = statement.executeQuery();
             
             if (resultSet.next()) {
-                cliente = new Clientes();
-                cliente.setIdentificacion1(resultSet.getInt("identificacion1"));
-                cliente.setNombre1(resultSet.getString("nombre1"));
-                cliente.setCorreo1(resultSet.getString("correo1"));
-                cliente.setEdad1(resultSet.getInt("edad1"));
+                cliente = new Clientedto(resultSet.getInt("identificacion"), resultSet.getString("nombre"), 
+                        resultSet.getString("correo"), resultSet.getInt("edad"));
             }
 
             resultSet.close();
             statement.close();
-            Conexion.desconectar();
+            Conexion.cerrarconexion();
         } catch (Exception e) {
             System.out.println("error read");
         }
         return cliente;
     }
 
-    public boolean update(Clientes clientes) throws SQLException {
+    public boolean update(Clientedto cliente) throws SQLException {
         boolean rowUpdate = false;
         try {
             
             String sql = "UPDATE Clientes SET nombre1=?, correo1=?, edad1=? WHERE identificacion1=?";
             conectar = Conexion.conectar();
-
             PreparedStatement statement = conectar.prepareStatement(sql);
             
-            statement.setString(1, clientes.getNombre1());
-            statement.setString(2, clientes.getCorreo1());
-            statement.setInt(3, clientes.getEdad1());
-            statement.setInt(4, clientes.getIdentificacion1());
+            statement.setString(1, cliente.getNombre1());
+            statement.setString(2, cliente.getCorreo1());
+            statement.setInt(3, cliente.getEdad1());
+            statement.setInt(4, cliente.getIdentificacion1());
             
             rowUpdate = statement.executeUpdate() > 0;
             statement.close();
-            Conexion.desconectar();
+            Conexion.cerrarconexion();
 
         } catch (Exception e) {
             System.out.println("error update");
@@ -102,7 +98,7 @@ public class Clientedao {
             rowDelete = statement.executeUpdate() > 0;
             
             statement.close();
-            Conexion.desconectar();
+            Conexion.cerrarconexion();
 
         } catch (Exception e) {
             System.out.println("error delete");
@@ -110,33 +106,32 @@ public class Clientedao {
         return rowDelete;
     } 
 
-    public List<Clientes> listaClientes() throws SQLException{
-        List<Clientes> lista = new ArrayList<>();
+    public List<Clientedto> listaClientes() throws SQLException{
+        List<Clientedto> listaClientes = new ArrayList<>();
         try {
             String sql = "SELECT * FROM Clientes";
             conectar = Conexion.conectar();
             
-            Statement statement = conectar.createStatement();
+            Statement statement = (Statement) conectar.createStatement();
             ResultSet resulSet = statement.executeQuery(sql);
 
             while(resulSet.next()) {
-                Clientes cliente = new Clientes();
-                cliente.setIdentificacion1(resulSet.getInt("identificacion1"));
-                cliente.setNombre1(resulSet.getString("nombre1"));
-                cliente.setCorreo1(resulSet.getString("correo1"));
-                cliente.setEdad1(resulSet.getInt("edad1"));
-
-                lista.add(cliente);
+                int identificacion1 = resulSet.getInt("identificacion");
+                String nombre1 = resulSet.getString("nombre");
+                String correo1 = resulSet.getString("correo");
+                int edad1 = resulSet.getInt("edad");
+                Clientedto cliente = new Clientedto(identificacion1,nombre1,correo1,edad1);
+                listaClientes.add(cliente);
+     
             }
+            
+                        
             statement.close();
-            Conexion.desconectar();
+            Conexion.cerrarconexion();
 
         } catch (Exception e) {
             System.out.println("error lista");
         }
-        return lista;
+        return listaClientes;
     }
 }
-
-    
-
