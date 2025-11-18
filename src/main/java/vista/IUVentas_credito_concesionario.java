@@ -36,6 +36,11 @@ public class IUVentas_credito_concesionario extends javax.swing.JFrame {
         setTitle("Ventas con credito del concesionario");
 
         ventas_credito.setText("Mostrar ventas");
+        ventas_credito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ventas_creditoActionPerformed(evt);
+            }
+        });
 
         jTCredito_consesionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,12 +90,16 @@ public class IUVentas_credito_concesionario extends javax.swing.JFrame {
                 .addComponent(ventas_credito)
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ventas_creditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventas_creditoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ventas_creditoActionPerformed
 
     /**
      * @param args the command line arguments

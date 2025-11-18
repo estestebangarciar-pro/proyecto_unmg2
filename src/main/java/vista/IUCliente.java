@@ -42,7 +42,7 @@ public class IUCliente extends javax.swing.JFrame {
         consultar = new javax.swing.JButton();
         consultar_todos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Modulo de Clientes");
@@ -108,7 +108,7 @@ public class IUCliente extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -133,7 +133,7 @@ public class IUCliente extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtabla);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,7 +256,7 @@ public class IUCliente extends javax.swing.JFrame {
     public javax.swing.JTextField identificacion;
     public javax.swing.JLabel identificacion1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jtabla;
     public javax.swing.JTextField nombre;
     public javax.swing.JLabel nombre1;
     // End of variables declaration//GEN-END:variables

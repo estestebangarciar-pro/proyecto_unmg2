@@ -1,4 +1,4 @@
-package modelo.dao;
+package Modelo.dao;
 
 import modelo.dto.Clientedto; 
 import java.sql.Connection;
