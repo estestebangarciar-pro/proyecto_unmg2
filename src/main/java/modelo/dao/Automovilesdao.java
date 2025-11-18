@@ -12,144 +12,133 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
+
+public class Automovilesdao{
+    private Connection coneccion;
+    private Automovilesdto automovil;
 
 /**
  *
  * @author esgar
  */
-public class Automovilesdao {
-    private Connection conectar;
-    private Automovilesdto automovil;
-    
-    public boolean create(Automovilesdto automovil) throws SQLException {
-        boolean rowCreate = false;
-        try {
-            String sql = "Insert into automovil (id_vehiculo, id_marca, modelo, precio, id_tipo_motor, color, vendido) values (?,?,?,?,?,?,?)";
-            conectar = Conexion.conectar();
-            
-            PreparedStatement statement = (PreparedStatement) conectar.prepareStatement(sql);
-            
-            statement.setInt(1, automovil.getId_vehiculo());
-            statement.setString(2,automovil.getMarca());
-            statement.setString(3, automovil.getModelo());
-            statement.setDouble(4, automovil.getPrecio_base());
-            statement.setString(5, automovil.getTipo_motor());
-            statement.setString(6, automovil.getColor());
-            statement.setString(7,automovil.getVendido());
-            
-            rowCreate = statement.executeUpdate() > 0;
-            statement.close();
-            Conexion.cerrarconexion(); 
-        } catch (Exception e){
-            System.out.println("error create");
-        }
-         return rowCreate;   
-        }       
-    
-    public Automovilesdto read(int id_vehiculo) throws SQLException {
-        Automovilesdto automovil = null;
-        try {
-            String sql = "SELECT * FROM automovil where id_vehiculo = ? and estado = 'A'";
-            conectar = Conexion.conectar();
-            
-            PreparedStatement statement = (PreparedStatement) conectar.prepareStatement(sql);
-            statement.setInt(1, id_vehiculo);
-            
-            ResultSet resultSet = statement.executeQuery();
-            
-            if (resultSet.next()) {
-                automovil = new Automovilesdto(resultSet.getInt("id_vehiculo"), resultSet.getString("modelo"), 
-                        resultSet.getDouble("precio_base"), resultSet.getString("color"), resultSet.getString("marca"),resultSet.getString("tipo_motor"),
-                        resultSet.getString("vendido"));
+
+    public int create(Automovilesdto automovil) {
+        try{
+        coneccion = Conexion.conectar();
+        PreparedStatement statement = coneccion.prepareStatement("Insert into automovil (id_vehiculo, id_marca, modelo, precio, id_tipo_motor, color, vendido) values (?,?,?,?,?,?,?)");
+
+        statement.setInt(1, automovil.getId_vehiculo());
+        statement.setString(2,automovil.getMarca());
+        statement.setString(3, automovil.getModelo());
+        statement.setDouble(4, automovil.getPrecio_base());
+        statement.setString(5, automovil.getTipo_motor());
+        statement.setString(6, automovil.getColor());
+        statement.setString(7,automovil.getVendido());
+
+        return statement.executeUpdate();
+
+
+            } catch (SQLException e) {
+              JOptionPane.showMessageDialog(null, 0);
+                return 0;
             }
-            
-            resultSet.close();
-            statement.close();
-            Conexion.cerrarconexion();
-        } catch (Exception e) {
-            System.out.println("error read");
-        }
-        return automovil;
     }
-    
-       public boolean update(Automovilesdto automovil) throws SQLException {
-        boolean rowUpdate = false;
+
+    public Automovilesdto read(int id_vehiculo){
         try {
-            
-            String sql = "UPDATE automovil SET id_vehiculo = ?, id_marca = ?, modelo = ?, precio = ?, id_tipo_motor = ?, color = ?, vendido = ? WHERE id_vehiculo =? and estado = 'A'";
-            conectar = Conexion.conectar();
-            PreparedStatement statement = conectar.prepareStatement(sql);
-            
-            statement.setInt(1, automovil.getId_vehiculo());
+            coneccion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("SELECT * FROM automovil where id_vehiculo = ? and estado = 'A'");
+
+            statement.setInt(1, id_vehiculo);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            automovil = new Automovilesdto();
+
+            if (resultSet.next()) {
+                automovil.setId_vehiculo(resultSet.getInt("id_vehiculo")); 
+                automovil.setModelo(resultSet.getString("modelo"));
+                automovil.setPrecio_base(resultSet.getDouble("precio_base"));
+                automovil.setColor(resultSet.getString("color"));
+                automovil.setMarca(resultSet.getString("marca"));
+                automovil.setTipo_motor(resultSet.getString("tipo_motor"));
+                automovil.setVendido(resultSet.getString("vendido"));
+            }else{
+                JOptionPane.showMessageDialog(null, "No existe automovil");
+                return null;
+            }
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, 0);
+                return null;
+            }
+            return automovil;
+    }
+
+    public int update(Automovilesdto automovil){
+        try{
+            coneccion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("UPDATE automovil SET id_vehiculo = ?, id_marca = ?, modelo = ?, precio = ?, id_tipo_motor = ?, color = ?, vendido = ? WHERE id_vehiculo =? and estado = 'A'");
+
+            //statement.setInt(1, automovil.getId_vehiculo());
             statement.setString(2,automovil.getMarca());
             statement.setString(3, automovil.getModelo());
             statement.setDouble(4, automovil.getPrecio_base());
             statement.setString(5, automovil.getTipo_motor());
             statement.setString(6, automovil.getColor());
             statement.setString(7,automovil.getVendido());
-            
-            rowUpdate = statement.executeUpdate() > 0;
-            statement.close();
-            Conexion.cerrarconexion();
 
-        } catch (Exception e) {
-            System.out.println("error update");
-        }
-        return rowUpdate;
+            return statement.executeUpdate();
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, 0);
+                return 0;
+            }
     }
-    public boolean delete(int id_vehiculo)throws SQLException {
-        boolean rowDelete = false;
-        try {
-            
-            String sql = "DELETE FROM automovil WHERE id_vehiculo = ?";
+
+    public int delete(Automovilesdto automovil){
+        try{
+            coneccion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("DELETE FROM automovil WHERE id_vehiculo = ?");
             //Update automovil set estado = 'C' where id_vehiculo = ?
-            conectar = Conexion.conectar();
+            statement.setInt(1, automovil.getId_vehiculo());
+            return statement.executeUpdate();
 
-            PreparedStatement statement = conectar.prepareStatement(sql);
-            statement.setInt(1, id_vehiculo);
-
-            rowDelete = statement.executeUpdate() > 0;
-            
-            statement.close();
-            Conexion.cerrarconexion();
-
-        } catch (Exception e) {
-            System.out.println("error delete");
-        }
-        return rowDelete;
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, 0);
+                return 0;
+            } 
     }
-    public List<Automovilesdto> listaAutomovil() throws SQLException{
-        List<Automovilesdto> listaAutomovil = new ArrayList<>();
-        try {
-            String sql = "SELECT * FROM automovil where estado = 'A'";
-            conectar = Conexion.conectar();
-            
-            Statement statement = (Statement) conectar.createStatement();
-            ResultSet resulSet = statement.executeQuery(sql);
 
-            while(resulSet.next()) {
-                int id_vehiculo = resulSet.getInt("id_vehiculo");
-                String modelo = resulSet.getString("modelo");
-                double precio_base = resulSet.getDouble("precio_base");
-                String color = resulSet.getString("color");
-                String marca = resulSet.getString("marca");
-                String tipo_motor = resulSet.getString("tipo_motor");
-                String vendido = resulSet.getString("vendido");
-                
-                Automovilesdto automovil = new Automovilesdto(id_vehiculo,modelo,precio_base,color, marca, tipo_motor,vendido);
+    public List<Automovilesdto> readAll(){
+        try {
+             List<Automovilesdto> listaAutomovil = new ArrayList<>();
+             
+             coneccion = Conexion.conectar();
+             
+             PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("SELECT * FROM automovil where estado = 'A'");
+             
+             ResultSet resultSet = statement.executeQuery();
+             
+             Automovilesdto automovil = new Automovilesdto();
+             
+             while (resultSet.next()) {
+                automovil.setId_vehiculo(resultSet.getInt("id_vehiculo")); 
+                automovil.setModelo(resultSet.getString("modelo"));
+                automovil.setPrecio_base(resultSet.getDouble("precio_base"));
+                automovil.setColor(resultSet.getString("color"));
+                automovil.setMarca(resultSet.getString("marca"));
+                automovil.setTipo_motor(resultSet.getString("tipo_motor"));
+                automovil.setVendido(resultSet.getString("vendido"));
                 
                 listaAutomovil.add(automovil);
-     
-            }
-            
-                        
-            statement.close();
-            Conexion.cerrarconexion();
-
-        } catch (Exception e) {
-            System.out.println("error lista");
+             }
+             return listaAutomovil;    
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            return null;
         }
-        return listaAutomovil;
-    }
-
+    }        
 }
+/*
+*/

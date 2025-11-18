@@ -18,7 +18,7 @@ public class Automovilesdto implements Serializable {
     private String marca;
     private String tipo_motor;
     private String vendido;          
-
+/*
     public Automovilesdto (int id_vehiculo, String modelo, double precio_base, String color, String marca, String tipo_motor, String vendido){
         this.id_vehiculo = id_vehiculo;
         this.modelo = modelo;
@@ -28,7 +28,7 @@ public class Automovilesdto implements Serializable {
         this.tipo_motor = tipo_motor;
         this.vendido = vendido;
     }
-    
+ */   
     public int getId_vehiculo(){
     return id_vehiculo;
     }
@@ -56,5 +56,34 @@ public class Automovilesdto implements Serializable {
     public String getVendido() {
     return vendido;
     }
+    
+    /////seters
+    public void setId_vehiculo(int id_vehiculo) {
+    this.id_vehiculo = id_vehiculo;
+    }   
+
+    public void setModelo(String modelo) {
+    this.modelo = modelo;
+    }   
+
+    public void setPrecio_base(Double precio_base) {
+    this.precio_base = precio_base;
+    }
+    
+    public void setColor(String color) {
+    this.color = color;
+    }  
+
+    public void setMarca(String marca) {
+    this.marca = marca;
+    }  
+
+    public void setTipo_motor(String tipo_motor) {
+    this.tipo_motor = tipo_motor;
+    }
+    
+    public void setVendido(String vendido) {
+    this.vendido = vendido;
+    }  
     
 }
