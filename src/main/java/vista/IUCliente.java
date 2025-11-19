@@ -260,4 +260,6 @@ public class IUCliente extends javax.swing.JFrame {
     public javax.swing.JTextField nombre;
     public javax.swing.JLabel nombre1;
     // End of variables declaration//GEN-END:variables
+
+    
 }
