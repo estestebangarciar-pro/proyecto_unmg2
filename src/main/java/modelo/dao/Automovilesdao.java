@@ -15,7 +15,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class Automovilesdao{
-    private Connection coneccion;
+    private Connection conexion;
     private Automovilesdto automovil;
 
 /**
@@ -25,8 +25,8 @@ public class Automovilesdao{
 
     public int create(Automovilesdto automovil) {
         try{
-        coneccion = Conexion.conectar();
-        PreparedStatement statement = coneccion.prepareStatement("Insert into automovil (id_vehiculo, id_marca, modelo, precio, id_tipo_motor, color, vendido) values (?,?,?,?,?,?,?)");
+        conexion = Conexion.conectar();
+        PreparedStatement statement = conexion.prepareStatement("Insert into automovil (id_vehiculo, id_marca, modelo, precio, id_tipo_motor, color, vendido) values (?,?,?,?,?,?,?)");
 
         statement.setInt(1, automovil.getId_vehiculo());
         statement.setString(2,automovil.getMarca());
@@ -47,8 +47,8 @@ public class Automovilesdao{
 
     public Automovilesdto read(int id_vehiculo){
         try {
-            coneccion = Conexion.conectar();
-            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("SELECT * FROM automovil where id_vehiculo = ? and estado = 'A'");
+            conexion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("SELECT * FROM automovil where id_vehiculo = ? and estado = 'A'");
 
             statement.setInt(1, id_vehiculo);
 
@@ -77,8 +77,8 @@ public class Automovilesdao{
 
     public int update(Automovilesdto automovil){
         try{
-            coneccion = Conexion.conectar();
-            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("UPDATE automovil SET id_vehiculo = ?, id_marca = ?, modelo = ?, precio = ?, id_tipo_motor = ?, color = ?, vendido = ? WHERE id_vehiculo =? and estado = 'A'");
+            conexion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("UPDATE automovil SET id_vehiculo = ?, id_marca = ?, modelo = ?, precio = ?, id_tipo_motor = ?, color = ?, vendido = ? WHERE id_vehiculo =? and estado = 'A'");
 
             //statement.setInt(1, automovil.getId_vehiculo());
             statement.setString(2,automovil.getMarca());
@@ -98,8 +98,8 @@ public class Automovilesdao{
 
     public int delete(Automovilesdto automovil){
         try{
-            coneccion = Conexion.conectar();
-            PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("DELETE FROM automovil WHERE id_vehiculo = ?");
+            conexion = Conexion.conectar();
+            PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("DELETE FROM automovil WHERE id_vehiculo = ?");
             //Update automovil set estado = 'C' where id_vehiculo = ?
             statement.setInt(1, automovil.getId_vehiculo());
             return statement.executeUpdate();
@@ -114,9 +114,9 @@ public class Automovilesdao{
         try {
              List<Automovilesdto> listaAutomovil = new ArrayList<>();
              
-             coneccion = Conexion.conectar();
+             conexion = Conexion.conectar();
              
-             PreparedStatement statement = (PreparedStatement) coneccion.prepareStatement("SELECT * FROM automovil where estado = 'A'");
+             PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("SELECT * FROM automovil where estado = 'A'");
              
              ResultSet resultSet = statement.executeQuery();
              
