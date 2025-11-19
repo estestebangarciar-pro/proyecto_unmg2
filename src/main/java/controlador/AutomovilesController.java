@@ -6,11 +6,14 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.List;
 import java.sql.SQLException;
 import vista.IUAutomoviles;
 import modelo.dao.Automovilesdao;
 import modelo.dto.Automovilesdto;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -20,6 +23,7 @@ public class AutomovilesController implements ActionListener{
     private IUAutomoviles vista;
     private Automovilesdao modelo;
     private Automovilesdto automoviles;
+    private DefaultTableModel modeloTable;
     
     public AutomovilesController(IUAutomoviles vista){
         
