@@ -4,7 +4,7 @@
  */
 package modelo.dao;
 
-import Modelo.dto.Marcadto;
+import Modelo.dto.Vendedoresdto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,22 +14,24 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-public class Marcadao{
+public class Vendedoresdao{
     private Connection conexion;
-    private Marcadto marca;
+    private Vendedoresdto vendedores;
+    
 
 /**
  *
  * @author esgar
  */
 
-    public int create(Marcadto marca) {
+    public int create(Vendedoresdto vendedores) {
         try{
         conexion = Conexion.conectar();
         PreparedStatement statement = conexion.prepareStatement("Insert into automovil (id_vehiculo, id_marca, modelo, precio, id_tipo_motor, color, vendido) values (?,?,?,?,?,?,?)");
 
-        statement.setInt(1, marca.getJidentificacion());
-        statement.setString(2,marca.getJmarca());
+        statement.setInt(1, vendedores.getJidenti());
+        statement.setString(2,vendedores.getJjnombre());
+        statement.setString(3, vendedores.getjprofesio());
         
 
         return statement.executeUpdate();
@@ -41,7 +43,7 @@ public class Marcadao{
             }
     }
 
-    public Marcadto read(int jidentificacion){
+    public Vendedoresdto read(int jidentificacion){
         try {
             conexion = Conexion.conectar();
             PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("SELECT * FROM automovil where id_vehiculo = ? and estado = 'A'");
@@ -50,31 +52,35 @@ public class Marcadao{
 
             ResultSet resultSet = statement.executeQuery();
 
-            marca = new Marcadto();
+            vendedores = new Vendedoresdto();
 
             if (resultSet.next()) {
-                marca.setJidentificacion(resultSet.getInt("identificacion")); 
-                marca.setJmarca(resultSet.getString("marca"));
-                
+                vendedores.setJidenti(resultSet.getInt("identificacion"));
+                vendedores.setJjnombre(resultSet.getString("nombre"));
+                vendedores.setjprofesio(resultSet.getString("profesion"));
+
             }else{
-                JOptionPane.showMessageDialog(null, "Esta Marca no existe");
+                JOptionPane.showMessageDialog(null, "No existe automovil");
                 return null;
             }
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, 0);
                 return null;
             }
-            return marca;
+            return vendedores;
     }
 
-    public int update(Marcadto marca){
+    public int update(Vendedoresdto vendedores){
         try{
             conexion = Conexion.conectar();
             PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("UPDATE automovil SET id_vehiculo = ?, id_marca = ?, modelo = ?, precio = ?, id_tipo_motor = ?, color = ?, vendido = ? WHERE id_vehiculo =? and estado = 'A'");
 
-            statement.setInt(1, marca.getJidentificacion());
-            statement.setString(2,marca.getJmarca());
-           
+            statement.setString(1, vendedores.getJjnombre());
+            statement.setString(2, vendedores.getjprofesio());
+            statement.setInt(3, vendedores.getJidenti());
+
+
+
             return statement.executeUpdate();
 
             } catch (SQLException e) {
@@ -83,11 +89,12 @@ public class Marcadao{
             }
     }
 
-    public int delete(Marcadto marca){
+    public int delete(Vendedoresdto vendedores){
         try{
             conexion = Conexion.conectar();
             PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("DELETE FROM automovil WHERE id_vehiculo = ?");
-            statement.setInt(1, marca.getJidentificacion());
+            //Update automovil set estado = 'C' where id_vehiculo = ?
+            statement.setInt(1, vendedores.getJidenti());
             return statement.executeUpdate();
 
             } catch (SQLException e) {
@@ -96,30 +103,29 @@ public class Marcadao{
             } 
     }
 
-    public List<Marcadto> readAll(){
+     public List<Vendedoresdto> readAll() {
         try {
-             List<Marcadto> listaMarca = new ArrayList<>();
-             
-             conexion = Conexion.conectar();
-             
-             PreparedStatement statement = (PreparedStatement) conexion.prepareStatement("SELECT * FROM automovil where estado = 'A'");
-             
-             ResultSet resultSet = statement.executeQuery();
-             
-             Marcadto marca = new Marcadto();
-             
-             while (resultSet.next()) {
-                marca.setJidentificacion(resultSet.getInt("jidentificacion")); 
-                marca.setJmarca(resultSet.getString("jmarca"));
-               
-                listaMarca.add(marca);
-             }
-             return listaMarca;    
+            List<Vendedoresdto> lista = new ArrayList<>();
+
+            conexion = Conexion.conectar();
+            PreparedStatement statement = conexion.prepareStatement(
+                "SELECT * FROM vendedores"
+            );
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                Vendedoresdto tmp = new Vendedoresdto();
+                tmp.setJidenti(resultSet.getInt("identificacion"));
+                tmp.setJjnombre(resultSet.getString("nombre"));
+                tmp.setjprofesio(resultSet.getString("profesion"));
+                lista.add(tmp);
+            }
+
+            return lista;
+
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             return null;
         }
-    }        
+    }
 }
-/*
-*/
