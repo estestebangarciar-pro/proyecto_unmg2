@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.sql.SQLException;
 import vista.IUVentas_vendedores;
-import modelo.dao.Vendedores_ventasdao;
+import Modelo.dao.Vendedores_ventasdao;
 import modelo.dto.Vendedores_ventasdto;
 //import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
