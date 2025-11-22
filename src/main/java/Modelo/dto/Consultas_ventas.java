@@ -4,11 +4,13 @@
  */
 package Modelo.dto;
 
+import java.io.Serializable;
+
 /**
  *
  * @author cristobal
  */
-public class Consultas_ventas {
+public class Consultas_ventas implements Serializable{
     private int factura;
     private String fechaVenta;
     private int idVendedor;

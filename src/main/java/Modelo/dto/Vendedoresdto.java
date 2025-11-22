@@ -4,11 +4,13 @@
  */
 package Modelo.dto;
 
+import java.io.Serializable;
+
 /**
  *
  * @author cristobal
  */
-public class Vendedoresdto {
+public class Vendedoresdto implements Serializable{
     private int jidenti;
     private String jjnombre;
     private String jProfesio;
